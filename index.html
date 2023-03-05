@@ -26,21 +26,24 @@
             <h2 class="row fs-2 p-3">Search for a City:</h2>
             <input class="form-control" id="cityInput">
             <div class="p-3">
-                <button type="submit" class="btn btn-primary col-md-6 offset-md-3">Submit</button>
+                <button type="submit" class="btn btn-primary col-md-6 offset-md-3" id="submitBtn">Submit</button>
+            </div>
+            <div>
+                <h2 id="historyTitle">Your City Search History:</h2>
             </div>
         </section>
 
 
         <section class="container position-absolute top-50 start-50 translate-middle border border-primary w-50 h-75 p-3 bg-dark-subtle text-emphasis-dark">
             <section>
-                <h2>You haven't searched yet!</h2>
-                <p>Temp: ?</p>
-                <p>Wind: ?</p>
-                <p>Humidity: ?</p>
+                <h2 id="searchDisplayTitle">You haven't searched yet!</h2>
+                <p id="temp">Temp: ?</p>
+                <p id="wind">Wind: ?</p>
+                <p id="humidity">Humidity: ?</p>
             </section>
 
             <section>
-                <h2>5-Day Forecast:</h2>
+                <h2 id="forecastTitle">5-Day Forecast:</h2>
             </section>
                 
         </section>
