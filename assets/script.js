@@ -26,11 +26,25 @@ function renderToday(data){
 function renderFive(data){
     const forecastTitle = document.querySelector(`#forecastTitle`);
 
-    const dateObj = new Date();
-    const month = dateObj.getUTCMonth() + 1;
-    const day = dateObj.getUTCDate();
-    const year = dateObj.getUTCFullYear();
-    const date = `(`+month+`/`+day+`/`+year+`)`;
+    for(let i = 0; i < 5; i++){
+        const cityTitle = document.querySelector(`#searchDisplayTitle`+i);
+        const weatherEmoji = document.querySelector(`#weatherEmoji`+i);
+        const temp = document.querySelector(`#temp`+i);
+        const wind = document.querySelector(`#wind`+i);
+        const humidity = document.querySelector(`#humidity`+i);
+
+        const dateObj = new Date();
+        const month = dateObj.getUTCMonth() + 1;
+        const day = dateObj.getUTCDate() + 1 + i;
+        const year = dateObj.getUTCFullYear();
+        const date = `(`+month+`/`+day+`/`+year+`)`;
+
+        cityTitle.innerHTML = data.city.name+` `+date;
+        weatherEmoji.setAttribute(`src`, `https://openweathermap.org/img/wn/`+data.list[i*8].weather[0].icon+`.png`);
+        temp.innerHTML = `Temp (Fahrenheit): `+JSON.stringify(data.list[i*8].main.temp);
+        wind.innerHTML = `Wind (mph): `+data.list[i*8].wind.speed;
+        humidity.innerHTML = 'Humidity (%): '+JSON.stringify(data.list[i*8].main.humidity);
+    }
 }
 
 
