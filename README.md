@@ -24,8 +24,8 @@ Check any location's weather at the click of a button! Enter a city name, click 
 <br>OpenWeatherMap API
 
 # Relevant URL's
-<br>Live URL:
-<br>Github Repository:
+<br>Live URL: https://awalker2411.github.io/My-Weather-Dashboard/
+<br>Github Repository: https://github.com/awalker2411/My-Weather-Dashboard
 
 
 # License
